@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.lang.String;
+class Main {
+    public static void main(String[] args) {
+
+        //принимает на вход не нулевой массив чисел строкой
+        //элементы массива разделять пробелом
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        //String str = "5 6 19 42 -5 16";
+        String[] arr = str.split(" ");
+
+        int len = arr.length;
+        int buf;
+        for (int i = 0; i < len; i++) {
+            buf = Integer.parseInt(arr[i]);
+            if (buf % 3 == 0) { // если кратно трем, печатаю
+                System.out.print(buf + " ");
+            }
+        }
+    }
+}
